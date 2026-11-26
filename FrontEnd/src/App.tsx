@@ -208,7 +208,7 @@ function App() {
                 <div className={getAlertaClase(resultado.estado_alerta)}>
                   <h3>{resultado.estado_alerta}</h3>
                   <div className="result-row"><span>Consumo diario</span><strong>{resultado.consumo_kwh_dia} kWh</strong></div>
-                  <div className="result-row"><span>Costo mensual</span><strong>${resultado.costo_mensual_usd} USD</strong></div>
+                  <div className="result-row"><span>Costo mensual</span><strong>Bs. {resultado.costo_mensual_usd}</strong></div>
                   <div className="result-row"><span>Eficiencia</span><strong>{resultado.eficiencia_hidraulica}%</strong></div>
                   <p className="note">* Con carro cisterna sería aprox. 86x más caro.</p>
                 </div>
@@ -352,7 +352,7 @@ function App() {
                         <td>{s.bomba_marca} {s.bomba_modelo}</td>
                         <td>{s.horas_diarias}</td>
                         <td>{s.consumo_kwh_dia}</td>
-                        <td>${s.costo_mensual_usd}</td>
+                        <td>Bs. {s.costo_mensual_usd}</td>
                         <td>
                           <span className={`badge ${s.estado_alerta.toLowerCase().replace(/\s/g, '-')}`}>
                             {s.estado_alerta}

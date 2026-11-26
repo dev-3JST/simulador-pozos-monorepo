@@ -48,7 +48,7 @@ app.post('/api/simulate', async (req, res) => {
 
     const potencia_kw = Number(bomba.potencia_hp) * 0.746;
     const consumo_kwh_dia = potencia_kw * Number(horas_diarias);
-    const tarifa_promedio = 0.18;
+    const tarifa_promedio = 1.00;
     const costo_mensual_usd = consumo_kwh_dia * 30 * tarifa_promedio;
 
     let estado_alerta = 'Óptimo';
